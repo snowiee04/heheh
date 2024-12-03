@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgive Me? 🥺</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        /* Button Styling */
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        button:hover {
+            background: #e65a50;
+        }
+        .no-button {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm Sorry 😔</h1>
+    <p>
+        I know I’ve upset you, and it’s breaking my heart. You mean so much to me, 
+        and I never want to hurt you again. Please forgive me? I promise to make things right. ❤️
+    </p>
+    <div class="button-container">
+        <button onclick="forgiveMe()">Yes, I forgive you 😊</button>
+        <button id="noButton" class="no-button" onmouseover="moveButton()">No 😔</button>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("noButton");
+
+        // Move the "No" button to a random position
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+
+        // Handle "Yes" button click
+        function forgiveMe() {
+            document.body.innerHTML = `
+                <h1>Thank You, My Love! ❤️</h1>
+                <p>You’ve just made my heart so happy. I promise to be better for you, always. 💕</p>
+                <div style="font-size: 5em;">🥰</div>
+            `;
+        }
+    </script>
+</body>
+</html>
